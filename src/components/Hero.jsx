@@ -83,7 +83,8 @@ function Hero() {
           </div>
         </div>
         <div className="hero__image">
-          <img src="/assets/3.jpeg" alt="Foto profesional de Felipe" />
+          <img src={`${import.meta.env.BASE_URL}3.jpeg`} alt="Imagen 3" />
+
         </div>
       </div>
 

@@ -4,7 +4,8 @@ function About() {
     <section className="about" id="about">
       <div className="about__container">
         <div className="about__image">
-          <img src="../assets/felipe.jpg" alt="Felipe trabajando con múltiples monitores y código en pantalla" />
+          <img src={`${import.meta.env.BASE_URL}felipe.jpg`} alt="Yo" />
+
         </div>
         <div className="about__text">
           <h2>Sobre mí</h2>
