@@ -3,7 +3,10 @@ import '../styles/theme.scss';
 
 function ToggleTheme() {
   const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
+    // Por defecto, modo oscuro si no hay preferencia guardada
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === null) return true;
+    return storedTheme === 'dark';
   });
 
   useEffect(() => {
