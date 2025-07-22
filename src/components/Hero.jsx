@@ -35,9 +35,9 @@ function Hero() {
 
           <div className="hero__actions">
             <a
-              href="../assets/foto.jpeg"
+              href={`${import.meta.env.BASE_URL}assets/CV1.pdf`}
               className="hero__cv-button"
-              aria-label="Descargar CV de Felipe"
+              download="CV.pdf"
             >
               Descargar CV
             </a>
