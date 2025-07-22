@@ -1,0 +1,115 @@
+.contact {
+  width: 100vw;
+  background: linear-gradient(180deg, #9c7a7a 0%, #a2abbb 100%);
+  padding: 2.5rem 0 1.5rem 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contact__footer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+.contact__title {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact__social-links {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact__social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5e7cff;
+  background: rgba(255,255,255,0.06);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+
+  &:hover {
+    background: #5e7cff;
+    color: #fff;
+    border: 2px solid #fdd835;
+    box-shadow: 0 2px 12px rgba(94,124,255,0.15);
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.footer__note {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .contact__footer {
+    max-width: 100%;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .contact__title {
+    font-size: 1.5rem;
+  }
+  .contact__social-links {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 1.5rem 0 1rem 0;
+  }
+  .contact__footer {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  .contact__title {
+    font-size: 1.1rem;
+  }
+  .contact__social-links {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    align-items: center;
+  }
+  .contact__social-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+}

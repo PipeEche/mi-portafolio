@@ -1,0 +1,26 @@
+import '../styles/about.scss';
+function About() {
+  return (
+    <section className="about" id="about">
+      <div className="about__container">
+        <div className="about__image">
+          <img src="../assets/felipe.jpg" alt="Felipe trabajando con múltiples monitores y código en pantalla" />
+        </div>
+        <div className="about__text">
+          <h2>Sobre mí</h2>
+          <p>
+            Soy Felipe Echeverría Bascuñan, Analista Programador enfocado en desarrollo frontend, egresado del CFT INACAP Rancagua, preparado para crear interfaces limpias, escalables y eficientes. Me apasionan herramientas modernas como React, Vite, SASS y JavaScript, disfruto resolver desafíos técnicos con precisión.
+          </p>
+          <p>
+            Mi recorrido comenzó cuando descubrí cómo transformar ideas en experiencias interactivas. Desde entonces, me especializo en diseño modular, flujos optimizados y naming semántico que escalan.
+          </p>
+          <p>
+            Fuera del código, me gusta explorar nuevas herramientas y perfeccionar cada detalle para que la experiencia sea profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default About;

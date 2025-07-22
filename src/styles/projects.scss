@@ -1,0 +1,244 @@
+@use './breakpoints' as *;
+
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__card {
+    position: relative;
+    background: #f9fafb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 360px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    background: #574c4c;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+
+.projects__card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 0.75rem;
+  box-shadow: 0 24px 24px rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.projects__overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projects__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px) brightness(0.4);
+  transition: transform 0.6s ease, filter 0.5s ease;
+}
+
+.projects__card:hover .projects__image {
+  transform: scale(1.1);
+  filter: blur(8px) brightness(0.3);
+}
+
+.projects__content {
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  right: 1rem;
+  padding: 0rem;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  font-weight: bold;
+}
+
+.projects__content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0rem;
+}
+
+.projects__content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 95%;
+}
+
+.projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.projects__tag {
+  background-color: #383c52;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.projects__demo-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  background-color: #ad5656;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+// Tablet
+@media (max-width: $bp-md) {
+  .projects {
+    padding: 1.5rem 0.5rem;
+    &__grid {
+      gap: 1.2rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .projects__content {
+    left: 1rem;
+    right: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .projects__content h3 {
+    font-size: 1.4rem;
+  }
+
+  .projects__content p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .projects__demo-button {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .projects__image {
+    filter: blur(2px) brightness(0.4);
+  }
+}
+
+// Mobile
+@media (max-width: $bp-sm) {
+  .projects {
+    padding: 1rem 0.2rem;
+
+    &__title {
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+    }
+    &__grid {
+      gap: 0.7rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .projects__card {
+    height: 220px;
+  }
+
+  .projects__content {
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 0;
+  }
+
+  .projects__content h3 {
+    font-size: 1.1rem;
+  }
+
+  .projects__content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .projects__demo-button {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  }

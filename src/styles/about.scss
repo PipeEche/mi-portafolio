@@ -1,0 +1,136 @@
+@use './breakpoints' as *;
+
+.about {
+  padding: 4rem 2rem;
+  color: var(--text-color);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      width: 600px;
+      border-radius: 1rem;
+      box-shadow: 0 30px 30px rgb(0, 0, 0);
+      transition: transform 0.3s ease;
+      margin-top: 2rem;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__text {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+      text-align: left;
+      word-break: break-word;
+      padding: 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-size: 1rem;
+      color: var(--text-color);
+      text-align: left;
+      padding: 0 0.5rem;
+      word-break: break-word;
+    }
+  }
+}
+
+// Tablet
+@media (max-width: $bp-md) {
+  .about {
+    padding: 2rem 1rem;
+
+    &__container {
+      gap: 2rem;
+      padding: 0;
+    }
+
+    &__text {
+      max-width: 100%;
+      h2 {
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0 0.2rem;
+      }
+      p {
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 0 0.2rem;
+      }
+    }
+
+    &__image img {
+      width: 220px;
+      margin-top: 1.2rem;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: $bp-sm) {
+  .about {
+    padding: 1.2rem 0.5rem;
+
+    &__container {
+      gap: 1.2rem;
+      padding: 0;
+    }
+
+    &__text {
+      max-width: 100%;
+      h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 0.1rem;
+      }
+      p {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0 0.1rem;
+      }
+    }
+
+    &__image img {
+      width: 100%;
+      max-width: 140px;
+      margin-top: 1rem;
+    }
+  }
+}
