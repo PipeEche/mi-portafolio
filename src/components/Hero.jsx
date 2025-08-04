@@ -35,9 +35,9 @@ function Hero() {
 
           <div className="hero__actions">
             <a
-              href={`${import.meta.env.BASE_URL}assets/CV.pdf`}
+              href={`${import.meta.env.BASE_URL}assets/CVitae.pdf`}
               className="hero__cv-button"
-              download="CV.pdf"
+              download="CVitae.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
