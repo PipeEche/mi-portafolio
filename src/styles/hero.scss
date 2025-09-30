@@ -284,7 +284,6 @@
     box-sizing: border-box;
     font-size: 0.98rem;
   }
-  
 
   .hero__email-box {
     flex-direction: column;
@@ -326,7 +325,7 @@
   }
 
   .hero__image img {
-    max-width: 100px;
+    max-width: 400px;   /* 👈 antes 100px, ahora más grande */
     border-radius: 50%;
-    }
+  }
 }

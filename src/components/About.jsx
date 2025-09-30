@@ -10,7 +10,7 @@ function About() {
         <div className="about__text">
           <h2>Sobre mí</h2>
           <p>
-            Soy Felipe Echeverría Bascuñan, Analista Programador enfocado en desarrollo frontend, egresado del CFT INACAP Rancagua, preparado para crear interfaces escalables y eficientes. Me apasionan herramientas modernas como React, Vite, TailwindCSS y JavaScript, disfruto resolver desafíos técnicos con precisión.
+            Soy Felipe Echeverría Bascuñan, Analista Programador enfocado en desarrollo fullstack, egresado del CFT INACAP Rancagua, preparado para crear interfaces escalables y eficientes. Me apasionan herramientas modernas como React, Vite, TailwindCSS y JavaScript, disfruto resolver desafíos técnicos con precisión.
           </p>
           <p>
             Mi recorrido comenzó cuando descubrí cómo transformar ideas en experiencias interactivas.

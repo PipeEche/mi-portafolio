@@ -31,7 +31,7 @@ function Hero() {
         
         <div className="hero__text">
           <h1>¡Hola, soy <span>Felipe!</span></h1>
-          <p>Desarrollador Frontend especializado en React + Vite, SASS y JavaScript.</p>
+          <p>Desarrollador FullStack especializado en React + Vite, TailwindCSS y JavaScript.</p>
 
           <div className="hero__actions">
             <a
