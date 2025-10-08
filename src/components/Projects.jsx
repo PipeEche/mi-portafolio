@@ -1,16 +1,16 @@
 import '../styles/projects.scss';
-import ecommerceImg from '../assets/e-commerce.jpg';
+import ecommerceImg from '../assets/pwa.jpg';
 import fondoContactoImg from '../assets/fondocontacto.jpg';
 import consultoriaImg from '../assets/consultoria.jpg';
 
 function Projects() {
   const projectList = [
     {
-      title: 'Tienda Online Suplementos Deportivos',
-      description: 'Aplicación web de tipo E-commerce de suplementos deportivos, estilo dinámico, moderno y responsiva',
+      title: 'App PWA Para Gimnasio (en desarrollo)',
+      description: 'Aplicación PWA informativo y de reserva.',
       image: ecommerceImg,
-      technologies: ['React', 'Vite', 'TailwindCSS', 'TypeScript'],
-      demoUrl: "https://pipeeche.github.io/fitsupplements/"
+      technologies: ['PWA', 'React', 'Vite', 'TailwindCSS', 'TypeScript', 'Vercel'],
+      demoUrl: "https://record-gym.vercel.app/"
     },
     {
       title: 'Plataforma Web Reserva De Horas Clínica',

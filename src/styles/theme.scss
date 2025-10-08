@@ -9,7 +9,7 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;              /* antes: 100vw */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -61,74 +61,51 @@ h2 {
 
 .toggle-slider {
   display: inline-block;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: fixed;          /* antes: absolute */
+  inset-block-start: 1rem;  /* top */
+  inset-inline-end: 1rem;   /* right */
   z-index: 1000;
-  width: 60px;
-  height: 30px;
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(20px, 3.5vw, 30px);
 
   input {
     opacity: 0;
-    width: 0;
-    height: 0;
+    width: 0; height: 0;
   }
 
   .slider {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: #999;
     border-radius: 999px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     text-align: center;
-    line-height: 30px;
+    line-height: 1;          /* para centrar con flex */
+    display: flex;           /* centrado vertical/horizontal sin overflow */
+    align-items: center;
+    justify-content: center;
     color: white;
   }
 
-  input:checked + .slider {
-    background-color: #4b5563;
-  }
+  input:checked + .slider { background-color: #4b5563; }
 }
 
-// Tablet
+/* Tablet */
 @media (max-width: $bp-md) {
-  h2 {
-    font-size: 1.5rem;
-    padding: 0 0.3rem;
-  }
-  .toggle-theme {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-  }
+  h2 { font-size: 1.5rem; padding: 0 0.3rem; }
+  .toggle-theme { font-size: 0.85rem; padding: 0.4rem 0.8rem; }
   .toggle-slider {
-    width: 48px;
-    height: 24px;
-    top: 0.7rem;
-    right: 0.7rem;
-    .slider {
-      font-size: 0.9rem;
-      line-height: 24px;
-    }
+    inset-block-start: 0.7rem;
+    inset-inline-end: 0.7rem;
   }
 }
 
-// Mobile
+/* Mobile */
 @media (max-width: $bp-sm) {
-  body {
-    width: 100vw;
-    min-width: 0;
-    padding: 0;
-  }
-
-  h2 {
-    font-size: 1.15rem;
-    padding: 0 0.1rem;
-  }
+  body { width: 100%; min-width: 0; padding: 0; } /* reafirmamos */
+  h2 { font-size: 1.15rem; padding: 0 0.1rem; }
 
   .toggle-theme {
     display: block;
@@ -138,15 +115,10 @@ h2 {
   }
 
   .toggle-slider {
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 40px;
-    height: 20px;
-    transform: scale(0.9);
-
-    .slider {
-      font-size: 0.8rem;
-      line-height: 20px;
-    }
+    inset-block-start: 0.5rem;
+    inset-inline-end: 0.5rem;
+    width: clamp(36px, 10vw, 40px);
+    height: clamp(18px, 6.5vw, 20px);
+    /* 👇 sin transform para no “salirse” en móviles angostos */
   }
 }

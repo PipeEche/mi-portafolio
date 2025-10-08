@@ -5,22 +5,23 @@ export default function Skills() {
   const gridRef = useRef(null);
 
   const skills = [
-    { name: "HTML5", icon: "fab fa-html5", color: "#e34f26" },
-    { name: "CSS3", icon: "fab fa-css3-alt", color: "#1572B6" },
-    { name: "Sass", icon: "fab fa-sass", color: "#CD6799" },
-    { name: "JavaScript", icon: "fab fa-js", color: "#f7df1e" },
-    { name: "TypeScript", icon: "devicon-typescript-plain", color: "#3178C6" },
-    { name: "React", icon: "fab fa-react", color: "#61DBFB" },
-    { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain", color: "#38bdf8" },
-    { name: "Vite", icon: "devicon-vitejs-plain", color: "#646CFF" },
-    { name: "Node.js", icon: "fab fa-node-js", color: "#68A063" },
-    { name: "MongoDB", icon: "devicon-mongodb-plain", color: "#47A248" },
-    { name: "Python", icon: "fab fa-python", color: "#3776AB" },
-    { name: "Responsive Design", icon: "fas fa-mobile-alt", color: "#6366F1" },
-    { name: "Vercel", icon: "devicon-vercel-original", color: "#000000" },
-    { name: "GitHub", icon: "fab fa-github", color: "#181717" },
-    { name: "Supabase", icon: "devicon-supabase-plain", color: "#3ECF8E" },
-  ];
+  { name: "HTML5", icon: "fab fa-html5", color: "#e34f26" },
+  { name: "CSS3", icon: "fab fa-css3-alt", color: "#1572B6" },
+  { name: "Sass", icon: "fab fa-sass", color: "#CD6799" },
+  { name: "JavaScript", icon: "fab fa-js", color: "#f7df1e" },
+  { name: "TypeScript", icon: "devicon-typescript-plain", color: "#3178C6" },
+  { name: "React", icon: "fab fa-react", color: "#61DBFB" },
+  { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain", color: "#38bdf8" },
+  { name: "Vite", icon: "devicon-vitejs-plain", color: "#646CFF" },
+  { name: "Node.js", icon: "fab fa-node-js", color: "#68A063" },
+  // 👇 Eliminado MongoDB y agregado PWA
+  { name: "Apps PWAs", icon: "fas fa-rocket", color: "#0EA5E9" },
+  { name: "Responsive Design", icon: "fas fa-mobile-alt", color: "#6366F1" },
+  { name: "Vercel", icon: "devicon-vercel-original", color: "#000000" },
+  { name: "GitHub", icon: "fab fa-github", color: "#181717" },
+  { name: "Supabase", icon: "devicon-supabase-plain", color: "#3ECF8E" },
+];
+
 
   // Callback ref que inicializa el IntersectionObserver al montar el nodo
   const setGridRef = useCallback((node) => {

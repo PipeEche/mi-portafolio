@@ -10,6 +10,7 @@
   margin-top: 1.5rem;
   transition: background-color 0.4s ease, color 0.4s ease;
   box-sizing: border-box;
+  text-align: center; /* ✅ centra el texto por defecto */
 }
 
 .hero__container {
@@ -17,7 +18,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* ✅ centra hijos */
   gap: 2rem;
   margin: 0 auto;
   padding: 1rem;
@@ -27,7 +28,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center; /* ✅ antes: flex-start */
   }
 }
 
@@ -36,6 +37,13 @@
   width: 100%;
   flex: 1;
   box-sizing: border-box;
+
+  /* ✅ centra bloque y contenido */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   h1 {
     font-size: 2.5rem;
@@ -73,7 +81,7 @@
 .hero__actions {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* ✅ centrado bajo el texto */
   gap: 1rem;
   width: 100%;
   margin-top: 1.5rem;
@@ -91,7 +99,7 @@
   width: 100%;
   max-width: 340px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0 auto; /* ✅ centrado */
   gap: 0.5rem;
 }
 
@@ -130,7 +138,7 @@
 .hero__social-links {
   display: flex;
   gap: 1.2rem;
-  justify-content: center;
+  justify-content: center; /* ✅ centrado */
   margin-top: 1rem;
   color: var(--text-color);
   flex-wrap: wrap;
@@ -151,17 +159,12 @@
   font-size: 1rem;
   border: 2px solid transparent;
   transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
-  box-shadow: 0 5px 5px rgb(94, 124, 255);
+  box-shadow: 0 5px 5px rgb(0, 0, 0);
   width: 100%;
   max-width: 110px;
   justify-content: center;
   box-sizing: border-box;
 
-   background: rgba(255,255,255,0.06);
-  color: var(--text-color);
-  box-shadow: 0 5px 5px rgb(0, 0, 0);
-
-  // LinkedIn
   &.linkedin {
     background: #0077b5;
     color: #fff;
@@ -173,7 +176,6 @@
     }
   }
 
-  // Email
   &.email {
     background: #fff;
     color: #23293a;
@@ -185,7 +187,6 @@
     }
   }
 
-  // GitHub
   &.github {
     background: #000;
     color: #fff;
@@ -196,6 +197,7 @@
       transform: scale(1.05);
     }
   }
+
   i {
     font-size: 1.2rem;
   }
@@ -204,8 +206,8 @@
 .hero__image {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* ✅ */
+  align-items: center;     /* ✅ */
   width: 100%;
   box-sizing: border-box;
 
@@ -217,12 +219,12 @@
     box-shadow: 0 25px 25px rgb(0, 0, 0);
     height: auto;
     object-fit: cover;
-    margin: 0 auto;
+    margin: 0 auto; /* ✅ */
     display: block;
   }
 }
 
-// Tablet
+/* Tablet */
 @media (max-width: 900px) {
   .hero {
     padding: 1.2rem 0.5rem;
@@ -234,19 +236,15 @@
   }
   .hero__text {
     max-width: 100%;
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1.1rem;
-    }
+    h1 { font-size: 2rem; }
+    p  { font-size: 1.1rem; }
   }
   .hero__image img {
     max-width: 160px;
   }
 }
 
-// Mobile
+/* Mobile */
 @media (max-width: 600px) {
   .hero {
     padding: 0.5rem 0.1rem;
@@ -269,9 +267,7 @@
       font-size: 1.2rem;
       word-break: break-word;
     }
-    p {
-      font-size: 0.95rem;
-    }
+    p { font-size: 0.95rem; }
   }
 
   .hero__cv-button,
@@ -325,7 +321,7 @@
   }
 
   .hero__image img {
-    max-width: 400px;   /* 👈 antes 100px, ahora más grande */
+    max-width: 400px;
     border-radius: 50%;
   }
 }
